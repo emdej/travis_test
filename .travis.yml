@@ -5,7 +5,8 @@ os:
 
 before_script:
   - lsb_release -a
-  - ssh localhost "echo test"
+  - ping -c1 localhost
+  - ssh -vv localhost 'echo test'
   - rsync -aPvv /usr/include localhost:/tmp/
 
 python:
