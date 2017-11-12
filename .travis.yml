@@ -5,7 +5,8 @@ os:
 
 before_script:
   - lsb_release -a
-  - $TRAVIS_CC --version
+  - ssh localhost "echo test"
+  - rsync -aPvv /usr/include localhost:/tmp/
 
 python:
   - 2.7
