@@ -18,9 +18,9 @@ addons:
       - openssh-server
 
 install:
-  - rsync -v
-  - ssh -v
-  - ls ${HOME}/.ssh
+  - rsync --version
+  - ssh -V
+  - ls -la ${HOME}/.ssh
   - service ssh status
   - ssh-keygen -t rsa -N "" -f ${HOME}/.ssh/id_rsa
   - cat ${HOME}/.ssh/id_rsa.pub >> ${HOME}/.ssh/authorized_keys
