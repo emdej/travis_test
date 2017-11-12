@@ -1,5 +1,12 @@
 language: python
 
+os:
+  - linux
+
+before_script:
+  - lsb_release -a
+  - $TRAVIS_CC --version
+
 python:
   - 2.7
 
